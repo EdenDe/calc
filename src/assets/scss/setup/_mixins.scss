@@ -1,0 +1,80 @@
+/* Media queries Breakpoint mixins */
+
+@mixin for-mobile-layout {
+	@media (max-width: $padded-break-narrow) {
+		@content;
+	}
+}
+
+@mixin for-narrow-layout {
+	@media (min-width: $padded-break-narrow) {
+		@content;
+	}
+}
+
+@mixin for-normal-layout {
+	@media (min-width: $padded-break-normal) {
+		@content;
+	}
+}
+
+@mixin for-wide-layout {
+	@media (min-width: $padded-break-wide) {
+		@content;
+	}
+}
+
+@mixin layoutGTC($max, $layoutPadding) {
+	grid-template-columns:
+		minmax(auto, $layoutPadding)
+		minmax($max, 1fr)
+		minmax(auto, $layoutPadding);
+}
+
+@mixin btn($bg-color: $primary0, $type: 'classic') {
+	padding: em(10px);
+	border-radius: $classic-radius;
+	border: 1px solid transparent;
+	font-size: $font-size;
+
+	@if $type == 'classic' {
+		color: $clr4;
+		background-color: $bg-color;
+
+		&:hover {
+			background-color: transparent;
+			color: $clr1;
+			border-color: $clr1;
+		}
+	}
+
+	@if $type == 'trans' {
+		background-color: transparent;
+		border-color: $clr1;
+		color: $clr1;
+
+		&:hover {
+			background-color: $bg-color;
+			color: $clr4;
+		}
+	}
+}
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin svg-wrapper($color: $clr3, $size: 25px) {
+	@include flex-center;
+	background-color: $color;
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+	cursor: pointer;
+
+	&:hover {
+		scale: 1.1;
+	}
+}

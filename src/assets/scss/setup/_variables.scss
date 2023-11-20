@@ -1,0 +1,33 @@
+//FONTS
+//$rubik: 'rubik', cursive, 'sans serif';
+//$didactGothic: 'didactGothic', cursive, 'sans serif';
+
+$font-size: 16px;
+$classic-radius: 0.4em;
+
+// Colors
+$clr0: #fff;
+$clr1: #e8eaed;
+$clr2: #e6e6e6;
+$clr3: #919191;
+$clr4: #202124;
+$clr5: #040406;
+
+$primary0: #fd6262;
+$primary1: #00b190;
+
+$secondary: #00acfa;
+$secondary1: #5791ad;
+
+// LAYOUT BREAKPOINTS
+$break-narrow: 500px;
+$break-normal: 600px;
+$break-wide: 800px;
+
+$layoutPaddingLarge: 100px;
+$layoutPaddingMedium: 70px;
+$layoutPaddingSmall: 10px;
+
+$padded-break-narrow: $break-narrow + $layoutPaddingSmall * 2;
+$padded-break-normal: $break-normal + $layoutPaddingMedium * 2;
+$padded-break-wide: $break-wide + $layoutPaddingLarge * 2;

@@ -1,0 +1,64 @@
+@import '../../../assets/scss/setup/functions';
+@import '../../../assets/scss/setup/variables';
+
+$colNum: 4;
+$colWidth: rem(60px);
+$gapWidth: rem(10px);
+$calcClr1: #9a3b3b;
+$calcClr2: #c08261;
+$calcClr3: #f2ecbe;
+
+.calculator {
+	text-align: center;
+
+	&-actions {
+		display: grid;
+		grid-template-columns: repeat($colNum, 1fr);
+		gap: $gapWidth;
+		margin: auto;
+		width: fit-content;
+
+		.btn {
+			padding: em(5px);
+			background-color: $calcClr2;
+			border: 1px solid $clr4;
+			border-radius: em(5px);
+			width: $colWidth;
+			height: $colWidth;
+			color: white;
+
+			font-size: em(20px);
+			font-weight: bold;
+
+			&.mathematic {
+				color: $calcClr1;
+			}
+
+			&.C {
+				color: $calcClr3;
+			}
+		}
+	}
+
+	.math-solution {
+		display: grid;
+		background-color: darken($calcClr2, 6);
+		height: calc($colWidth * 2);
+		width: calc($colWidth * $colNum + $gapWidth * ($colNum - 1));
+		margin: em(10px) auto;
+		border-radius: em(5px);
+		border: 1px solid $clr4;
+
+		* {
+			justify-self: start;
+		}
+
+		.res {
+			font-size: em(30px);
+		}
+
+		.equation {
+			font-size: em(15px);
+		}
+	}
+}

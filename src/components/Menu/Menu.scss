@@ -1,0 +1,11 @@
+.menu {
+	display: flex;
+	align-items: flex-end;
+
+	.nav {
+		.nav-item:not(:last-child) {
+			margin-inline-end: 10px;
+			//padding: 5px;
+		}
+	}
+}

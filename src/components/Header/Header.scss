@@ -1,0 +1,13 @@
+@import '../../assets/scss/setup/functions';
+@import '../../assets/scss/setup/variables';
+
+.header {
+	.container {
+		padding: 20px;
+		.logo {
+			text-align: center;
+			font-size: em(50px);
+			font-weight: bold;
+		}
+	}
+}

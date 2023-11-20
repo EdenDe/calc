@@ -1,0 +1,78 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	font-family: 'calibri', 'arial', sans-serif;
+	font-size: $font-size;
+	background-color: $clr2;
+	color: $clr4;
+}
+
+::selection {
+	background-color: $primary1;
+	color: $clr4;
+}
+
+img {
+	width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+button {
+	font-family: inherit;
+	cursor: pointer;
+}
+
+input,
+fieldset,
+select,
+label,
+p {
+	font-family: inherit;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: $clr0;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: lighten($clr2, 10);
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #555;
+}
